@@ -12,9 +12,13 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    section { scroll-margin-top: 5rem; } /* offset for sticky header */
     .card { border-radius: 1rem; border: 1px solid rgb(229 231 235); }
     .shadow-soft { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
     .badge { display:inline-block; padding:.25rem .6rem; font-size:.8rem; border:1px solid rgb(229 231 235); border-radius:9999px; margin-right:.5rem; margin-bottom:.5rem; }
+    /* Hide sections until their anchor is targeted */
+    .hideable { display: none; }
+    .hideable:target { display: block; }
   </style>
 </head>
 <body class="min-h-screen bg-white text-slate-900">
@@ -116,8 +120,8 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <!-- About (hidden until clicked) -->
+  <section id="about" class="hideable max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Samantha Nash</h2>
       <p class="mt-2 text-slate-600 max-w-3xl">Twenty years of practice across homes, clinics, and schools in the UK and UAE</p>
@@ -136,9 +140,10 @@
         <img src="https://images.unsplash.com/photo-1555421689-43cad7100751?q=80&w=1200&auto=format&fit=crop" alt="About Speechbridge" class="w-full h-64 object-cover rounded-2xl shadow-soft">
       </div>
     </div>
+    <div class="mt-8"><a href="#home" class="underline">Back to Home</a></div>
   </section>
 
-  <!-- Families -->
+  <!-- Families detail -->
   <section id="families" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Families</h2>
@@ -219,8 +224,8 @@
     </div>
   </section>
 
-  <!-- Dubai -->
-  <section id="dubai" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <!-- Dubai (hidden until clicked) -->
+  <section id="dubai" class="hideable max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Dubai</h2>
       <p class="mt-2 text-slate-600">Support for families and speech therapists in the UAE.</p>
@@ -247,13 +252,13 @@
         </div>
       </div>
     </div>
+    <div class="mt-8"><a href="#home" class="underline">Back to Home</a></div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Contact</h2>
-      <p class="mt-2 text-slate-600">Email is the fastest way to check current availability.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-8 items-stretch">
       <div class="card p-6 md:col-span-2">
