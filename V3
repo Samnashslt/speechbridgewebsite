@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Speechbridge</title>
+  <meta name="description" content="Bridging Therapy and Professional Support. Connecting families, children and professionals with the support they need." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .card { border-radius: 1rem; border: 1px solid rgb(229 231 235); }
+    .shadow-soft { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .badge { display:inline-block; padding:.25rem .6rem; font-size:.8rem; border:1px solid rgb(229 231 235); border-radius:9999px; margin-right:.5rem; margin-bottom:.5rem; }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+      <a href="#home" class="flex items-center gap-2">
+        <img src="https://images.unsplash.com/photo-1544717305-996b815c338c?q=80&w=240&auto=format&fit=crop" alt="Speechbridge mark" class="h-8 w-8 rounded-full object-cover">
+        <span class="font-semibold text-lg">Speechbridge</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#home" class="hover:underline underline-offset-4">Home</a>
+        <a href="#about" class="hover:underline underline-offset-4">About</a>
+        <a href="#services" class="hover:underline underline-offset-4">Services</a>
+        <a href="#families" class="hover:underline underline-offset-4">Families</a>
+        <a href="#schools" class="hover:underline underline-offset-4">Nurseries and Schools</a>
+        <a href="#professionals" class="hover:underline underline-offset-4">Professionals</a>
+        <a href="#dubai" class="hover:underline underline-offset-4">Dubai</a>
+        <a href="#contact" class="hover:underline underline-offset-4">Contact</a>
+      </nav>
+      <a href="mailto:hello@speechbridge.co.uk" class="hidden sm:inline-flex items-center px-3 py-2 border rounded-lg text-sm shadow-soft">Email</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50 to-white"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Bridging Therapy and Professional Support</h1>
+          <p class="mt-4 text-lg text-slate-600">
+            Connecting families, children and professionals with the support they need.
+          </p>
+          <div class="mt-8 flex gap-3">
+            <a href="#services" class="px-5 py-3 rounded-lg bg-slate-900 text-white">View services</a>
+            <a href="#contact" class="px-5 py-3 rounded-lg border">Check availability</a>
+          </div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1523246192378-5694088703b5?q=80&w=1200&auto=format&fit=crop" alt="Friendly therapy session with parent and child" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-soft">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services overview -->
+  <section id="services" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">How I can help</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Families -->
+      <div class="card p-6 flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">Families</h3>
+        <p class="text-slate-600">
+          Assessment, therapy, and guidance for speech, language, communication, and eating and drinking.
+        </p>
+        <div class="mt-4">
+          <span class="badge">Speech and language</span>
+          <span class="badge">AAC</span>
+          <span class="badge">Dysphagia</span>
+          <span class="badge">Eating and drinking difficulties</span>
+          <span class="badge">Fussy eaters</span>
+          <span class="badge">Early Intervention</span>
+        </div>
+        <a href="#families" class="mt-6 px-4 py-2 rounded-lg bg-slate-900 text-white text-center">View details</a>
+      </div>
+      <!-- Nurseries and Schools -->
+      <div class="card p-6 flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">Nurseries and Schools</h3>
+        <p class="text-slate-600">
+          On site child screening, assessments and therapy. Staff training, support and individualised programmes tailored to fit into a busy school day.
+        </p>
+        <div class="mt-4">
+          <span class="badge">In class support</span>
+          <span class="badge">Free screening</span>
+          <span class="badge">Assessments</span>
+          <span class="badge">Therapy</span>
+          <span class="badge">Training</span>
+          <span class="badge">Conferences</span>
+          <span class="badge">Coffee mornings</span>
+        </div>
+        <a href="#schools" class="mt-6 px-4 py-2 rounded-lg bg-slate-900 text-white text-center">View details</a>
+      </div>
+      <!-- Professionals -->
+      <div class="card p-6 flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">Professionals</h3>
+        <p class="text-slate-600">
+          Supervision, interview prep, and mentoring for newly qualified and experienced therapists.
+        </p>
+        <div class="mt-4">
+          <span class="badge">Practical</span>
+          <span class="badge">Reflective</span>
+          <span class="badge">supportive</span>
+        </div>
+        <a href="#professionals" class="mt-6 px-4 py-2 rounded-lg bg-slate-900 text-white text-center">View details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Samantha Nash</h2>
+      <p class="mt-2 text-slate-600 max-w-3xl">Twenty years of practice across homes, clinics, and schools in the UK and UAE</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2 space-y-4">
+        <p>I am a qualified speech and language therapist and work with babies, children, teenagers, and young adults.</p>
+        <ul class="space-y-2">
+          <li class="flex gap-2"><span>•</span><span>Calm, friendly approach that helps families feel at ease</span></li>
+          <li class="flex gap-2"><span>•</span><span>Clear plans with measurable goals</span></li>
+          <li class="flex gap-2"><span>•</span><span>Close work with schools, teachers, and support staff</span></li>
+          <li class="flex gap-2"><span>•</span><span>Training that builds confidence and practical skills</span></li>
+        </ul>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1555421689-43cad7100751?q=80&w=1200&auto=format&fit=crop" alt="About Speechbridge" class="w-full h-64 object-cover rounded-2xl shadow-soft">
+      </div>
+    </div>
+  </section>
+
+  <!-- Families -->
+  <section id="families" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Families</h2>
+      <p class="mt-2 text-slate-600">Home and school based assessment and therapy. Sessions can also be online.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg mb-2">How I can help</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Speech sound, language, and communication</li>
+          <li>Dysphagia, eating and drinking plans, safe swallow strategies</li>
+          <li>AAC assessment and set up, parent guidance and device use, therapy</li>
+        </ul>
+        <a href="#contact" class="inline-block mt-4 px-4 py-2 rounded-lg bg-slate-900 text-white">Check availability</a>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg mb-2">Publications and handouts</h3>
+        <p class="text-slate-600 mb-3">Replace these links with your own files.</p>
+        <ul class="space-y-2">
+          <li><a class="underline" href="#">Mealtime posture checklist (PDF)</a></li>
+          <li><a class="underline" href="#">Early communication tips (PDF)</a></li>
+          <li><a class="underline" href="#">AAC first steps for families (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nurseries and Schools -->
+  <section id="schools" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Nurseries and Schools</h2>
+      <p class="mt-2 text-slate-600">Tailored intervention to meet communication and eating and drinking needs of the children.</p>
+    </div>
+    <div class="grid md:grid-cols-1 gap-8">
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg mb-2">What I offer</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>On site clinics and intervention</li>
+          <li>Screening, target setting, and outcome tracking</li>
+          <li>Staff training and in class support</li>
+          <li>AAC assessment and training</li>
+          <li>Parent coffee mornings and workshops</li>
+        </ul>
+        <div class="pt-3">
+          <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Request a call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professionals -->
+  <section id="professionals" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Professionals</h2>
+      <p class="mt-2 text-slate-600">Support for newly qualified and experienced therapists.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg mb-2">Supervision and mentoring</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Structured supervision that aligns with HCPC and RCSLT guidance</li>
+          <li>Case discussion and clinical reflection</li>
+          <li>Interview prep and Masters application coaching</li>
+          <li>Goal setting and CPD planning</li>
+        </ul>
+        <div class="pt-3">
+          <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Enquire</a>
+        </div>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg mb-2">How sessions work</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Online or in person, clear notes and outcomes after each session</li>
+          <li>Confidential, supportive space with practical next steps</li>
+          <li>Flexible blocks or ad hoc sessions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dubai -->
+  <section id="dubai" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Dubai</h2>
+      <p class="mt-2 text-slate-600">Support for families and speech therapists in the UAE.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg mb-2">How I can help in Dubai</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Assessment and therapy for speech, language, and communication</li>
+          <li>Eating and drinking assessment with clear mealtime plans</li>
+          <li>AAC assessment, set up, and parent and staff training</li>
+          <li>Online follow up between visits</li>
+        </ul>
+        <a href="#contact" class="inline-block mt-4 px-4 py-2 rounded-lg bg-slate-900 text-white">Request Dubai availability</a>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-semibold text-lg mb-2">Working with clinics and schools</h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Partnerships with clinics and schools for casework and screening</li>
+          <li>Staff training on safe feeding, communication friendly settings, and AAC</li>
+        </ul>
+        <div class="pt-3">
+          <a href="mailto:hello@speechbridge.co.uk?subject=Dubai%20enquiry" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Email about Dubai</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Contact</h2>
+      <p class="mt-2 text-slate-600">Email is the fastest way to check current availability.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+      <div class="card p-6 md:col-span-2">
+        <h3 class="font-semibold text-lg mb-2">Get in touch</h3>
+        <p class="text-slate-600">Send a short note with your name, your setting, and a brief summary of what you need. I will reply with available times and next steps.</p>
+        <div class="flex flex-wrap gap-3 mt-4">
+          <a href="mailto:hello@speechbridge.co.uk?subject=Enquiry%20from%20Speechbridge%20website" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Email</a>
+          <a href="tel:+44XXXXXXXXXX" class="px-4 py-2 rounded-lg">Call</a>
+          <a href="https://wa.me/44XXXXXXXXXX" class="px-4 py-2 rounded-lg border">WhatsApp</a>
+        </div>
+      </div>
+      <div class="card p-6 text-sm space-y-2">
+        <div>Based in the UK and Dubai.</div>
+        <div>Fully qualified and registered with HCPC and RCSLT</div>
+        <div>Enhanced DBS, safeguarding training, insurance.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-slate-600">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <div class="font-medium text-slate-900">Speechbridge</div>
+          <div>© 2025 Speechbridge. All rights reserved.</div>
+        </div>
+        <div class="flex gap-6">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <a href="mailto:hello@speechbridge.co.uk?subject=Enquiry%20from%20Speechbridge%20website"
+     class="fixed bottom-4 right-4 px-4 py-3 rounded-lg bg-slate-900 text-white shadow-soft">Email now</a>
+</body>
+</html>
