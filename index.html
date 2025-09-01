@@ -10,22 +10,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root{
+      --brand:#227C70;
+      --brand-700:#1a685e;
+      --brand-800:#155e54;
+      --brand-50:#EAF7F4;
+      --ink:#0f172a;
+    }
     html { scroll-behavior: smooth; }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); }
     section { scroll-margin-top: 5rem; }
+    h1,h2,h3 { color: var(--brand-800); }
+    .subtitle { color:#2f746a; }
     .card { border-radius: 1rem; border: 1px solid rgb(229 231 235); }
     .shadow-soft { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
     .badge { display:inline-block; padding:.25rem .6rem; font-size:.8rem; border:1px solid rgb(229 231 235); border-radius:9999px; margin-right:.5rem; margin-bottom:.5rem; }
     .hideable { display: none; }
     .hideable:target { display: block; }
+    .btn-brand { background: var(--brand); color:#fff; }
+    .btn-brand:hover { background: var(--brand-700); }
+    .btn-outline-brand { border:2px solid var(--brand); color:var(--brand); }
+    .btn-outline-brand:hover { background: var(--brand); color:#fff; }
   </style>
 </head>
-<body class="min-h-screen bg-white text-slate-900">
+<body class="min-h-screen bg-white">
   <!-- Header -->
   <header class="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
       <a href="#home" class="flex items-center gap-2">
-        <img src="https://images.unsplash.com/photo-1544717305-996b815c338c?q=80&w=240&auto=format&fit=crop" alt="Speechbridge mark" class="h-8 w-8 rounded-full object-cover">
+        <!-- Small logo in navbar -->
+        <img src="logo.png" alt="Speechbridge logo" class="h-8 w-auto object-contain">
         <span class="font-semibold text-lg">Speechbridge</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -38,23 +52,25 @@
         <a href="#dubai" class="hover:underline underline-offset-4">Dubai</a>
         <a href="#contact" class="hover:underline underline-offset-4">Contact</a>
       </nav>
-      <a href="mailto:hello@speechbridge.co.uk" class="hidden sm:inline-flex items-center px-3 py-2 border rounded-lg text-sm shadow-soft">Email</a>
+      <a href="mailto:hello@speechbridge.co.uk" class="hidden sm:inline-flex items-center px-3 py-2 rounded-lg text-sm shadow-soft btn-outline-brand">Email</a>
     </div>
   </header>
 
   <!-- Hero -->
   <section id="home" class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50 to-white"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--brand-50)] to-white"></div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
+          <!-- Large logo above the heading -->
+          <img src="logo.png" alt="Speechbridge logo" class="w-full max-w-[520px] mb-4 object-contain">
           <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Bridging Therapy and Professional Support</h1>
-          <p class="mt-4 text-lg text-slate-600">
+          <p class="mt-4 text-lg subtitle">
             Connecting families, children and professionals with the support they need.
           </p>
           <div class="mt-8 flex gap-3">
-            <a href="#services" class="px-5 py-3 rounded-lg bg-slate-900 text-white">View services</a>
-            <a href="#contact" class="px-5 py-3 rounded-lg border">Check availability</a>
+            <a href="#services" class="px-5 py-3 rounded-lg btn-brand">View services</a>
+            <a href="#contact" class="px-5 py-3 rounded-lg btn-outline-brand">Check availability</a>
           </div>
         </div>
         <div>
@@ -73,7 +89,7 @@
       <!-- Families -->
       <div class="card p-6 flex flex-col">
         <h3 class="text-xl font-semibold mb-2">Families</h3>
-        <p class="text-slate-600">
+        <p class="subtitle">
           Assessment, therapy, and guidance for speech, language, communication, and eating and drinking.
         </p>
         <div class="mt-4">
@@ -84,12 +100,12 @@
           <span class="badge">Fussy eaters</span>
           <span class="badge">Early Intervention</span>
         </div>
-        <a href="#families" class="mt-6 px-4 py-2 rounded-lg bg-slate-900 text-white text-center">View details</a>
+        <a href="#families" class="mt-6 px-4 py-2 rounded-lg text-center btn-brand">View details</a>
       </div>
       <!-- Nurseries and Schools -->
       <div class="card p-6 flex flex-col">
         <h3 class="text-xl font-semibold mb-2">Nurseries and Schools</h3>
-        <p class="text-slate-600">
+        <p class="subtitle">
           On site child screening, assessments and therapy. Staff training, support and individualised programmes tailored to fit into a busy school day.
         </p>
         <div class="mt-4">
@@ -101,12 +117,12 @@
           <span class="badge">Conferences</span>
           <span class="badge">Coffee mornings</span>
         </div>
-        <a href="#schools" class="mt-6 px-4 py-2 rounded-lg bg-slate-900 text-white text-center">View details</a>
+        <a href="#schools" class="mt-6 px-4 py-2 rounded-lg text-center btn-brand">View details</a>
       </div>
       <!-- Professionals -->
       <div class="card p-6 flex flex-col">
         <h3 class="text-xl font-semibold mb-2">Professionals</h3>
-        <p class="text-slate-600">
+        <p class="subtitle">
           Supervision, interview prep, and mentoring for newly qualified and experienced therapists.
         </p>
         <div class="mt-4">
@@ -114,7 +130,7 @@
           <span class="badge">Reflective</span>
           <span class="badge">supportive</span>
         </div>
-        <a href="#professionals" class="mt-6 px-4 py-2 rounded-lg bg-slate-900 text-white text-center">View details</a>
+        <a href="#professionals" class="mt-6 px-4 py-2 rounded-lg text-center btn-brand">View details</a>
       </div>
     </div>
   </section>
@@ -123,7 +139,7 @@
   <section id="families" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Families</h2>
-      <p class="mt-2 text-slate-600">Home and school based assessment and therapy. Sessions can also be online.</p>
+      <p class="mt-2 subtitle">Home and school based assessment and therapy. Sessions can also be online.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="card p-6">
@@ -133,11 +149,11 @@
           <li>Dysphagia, eating and drinking plans, safe swallow strategies</li>
           <li>AAC assessment and set up, parent guidance and device use, therapy</li>
         </ul>
-        <a href="#contact" class="inline-block mt-4 px-4 py-2 rounded-lg bg-slate-900 text-white">Check availability</a>
+        <a href="#contact" class="inline-block mt-4 px-4 py-2 rounded-lg btn-brand">Check availability</a>
       </div>
       <div class="card p-6">
         <h3 class="font-semibold text-lg mb-2">Publications and handouts</h3>
-        <p class="text-slate-600 mb-3">Replace these links with your own files.</p>
+        <p class="subtitle mb-3">Replace these links with your own files.</p>
         <ul class="space-y-2">
           <li><a class="underline" href="#">Mealtime posture checklist (PDF)</a></li>
           <li><a class="underline" href="#">Early communication tips (PDF)</a></li>
@@ -152,15 +168,15 @@
       <div class="grid md:grid-cols-3 gap-6">
         <div class="card p-6">
           <p class="italic">"Sam built our confidence around mealtimes. Eating is calmer and safer now."</p>
-          <div class="mt-3 text-sm text-slate-600">Parent of toddler with dysphagia</div>
+          <div class="mt-3 text-sm subtitle">Parent of toddler with dysphagia</div>
         </div>
         <div class="card p-6">
           <p class="italic">"Practical tips we could use the same day. Speech sounds improved quickly."</p>
-          <div class="mt-3 text-sm text-slate-600">Parent of 6 year old</div>
+          <div class="mt-3 text-sm subtitle">Parent of 6 year old</div>
         </div>
         <div class="card p-6">
           <p class="italic">"She listened and made a plan that worked for our family."</p>
-          <div class="mt-3 text-sm text-slate-600">Parent</div>
+          <div class="mt-3 text-sm subtitle">Parent</div>
         </div>
       </div>
     </div>
@@ -170,9 +186,9 @@
   <section id="schools" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Nurseries and Schools</h2>
-      <p class="mt-2 text-slate-600">Tailored intervention to meet communication and eating and drinking needs of the children.</p>
     </div>
-    <div class="grid md:grid-cols-1 gap-8">
+    <p class="mt-2 subtitle max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">Tailored intervention to meet communication and eating and drinking needs of the children.</p>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-1 gap-8 mt-6">
       <div class="card p-6">
         <h3 class="font-semibold text-lg mb-2">What I offer</h3>
         <ul class="list-disc pl-5 space-y-1">
@@ -183,26 +199,26 @@
           <li>Parent coffee mornings and workshops</li>
         </ul>
         <div class="pt-3">
-          <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Request a call</a>
+          <a href="#contact" class="px-4 py-2 rounded-lg btn-brand">Request a call</a>
         </div>
       </div>
     </div>
 
     <!-- Schools testimonials -->
-    <div class="mt-12">
+    <div class="mt-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h3 class="text-2xl font-semibold mb-4">Testimonials</h3>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="card p-6">
           <p class="italic">"Staff confidence increased and strategies are now used across classes."</p>
-          <div class="mt-3 text-sm text-slate-600">SENCo</div>
+          <div class="mt-3 text-sm subtitle">SENCo</div>
         </div>
         <div class="card p-6">
           <p class="italic">"Clear targets and simple tracking helped us show progress."</p>
-          <div class="mt-3 text-sm text-slate-600">Assistant head</div>
+          <div class="mt-3 text-sm subtitle">Assistant head</div>
         </div>
         <div class="card p-6">
           <p class="italic">"AAC training made a real difference to our pupils."</p>
-          <div class="mt-3 text-sm text-slate-600">Specialist TA</div>
+          <div class="mt-3 text-sm subtitle">Specialist TA</div>
         </div>
       </div>
     </div>
@@ -212,7 +228,7 @@
   <section id="professionals" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Professionals</h2>
-      <p class="mt-2 text-slate-600">Support for newly qualified and experienced therapists.</p>
+      <p class="mt-2 subtitle">Support for newly qualified and experienced therapists.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="card p-6">
@@ -224,7 +240,7 @@
           <li>Goal setting and CPD planning</li>
         </ul>
         <div class="pt-3">
-          <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Enquire</a>
+          <a href="#contact" class="px-4 py-2 rounded-lg btn-brand">Enquire</a>
         </div>
       </div>
       <div class="card p-6">
@@ -243,15 +259,15 @@
       <div class="grid md:grid-cols-3 gap-6">
         <div class="card p-6">
           <p class="italic">"Supportive supervision with clear actions after each session."</p>
-          <div class="mt-3 text-sm text-slate-600">Band 5 SLT</div>
+          <div class="mt-3 text-sm subtitle">Band 5 SLT</div>
         </div>
         <div class="card p-6">
           <p class="italic">"Interview prep was focused and helpful. I felt ready."</p>
-          <div class="mt-3 text-sm text-slate-600">Newly qualified therapist</div>
+          <div class="mt-3 text-sm subtitle">Newly qualified therapist</div>
         </div>
         <div class="card p-6">
           <p class="italic">"Reflective space that improved my dysphagia practice."</p>
-          <div class="mt-3 text-sm text-slate-600">Senior SLT</div>
+          <div class="mt-3 text-sm subtitle">Senior SLT</div>
         </div>
       </div>
     </div>
@@ -261,7 +277,7 @@
   <section id="dubai" class="hideable max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Dubai</h2>
-      <p class="mt-2 text-slate-600">Support for families and speech therapists in the UAE.</p>
+      <p class="mt-2 subtitle">Support for families and speech therapists in the UAE.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="card p-6">
@@ -272,7 +288,7 @@
           <li>AAC assessment, set up, and parent and staff training</li>
           <li>Online follow up between visits</li>
         </ul>
-        <a href="#contact" class="inline-block mt-4 px-4 py-2 rounded-lg bg-slate-900 text-white">Request Dubai availability</a>
+        <a href="#contact" class="inline-block mt-4 px-4 py-2 rounded-lg btn-brand">Request Dubai availability</a>
       </div>
       <div class="card p-6">
         <h3 class="font-semibold text-lg mb-2">Working with clinics and schools</h3>
@@ -281,7 +297,7 @@
           <li>Staff training on safe feeding, communication friendly settings, and AAC</li>
         </ul>
         <div class="pt-3">
-          <a href="mailto:hello@speechbridge.co.uk?subject=Dubai%20enquiry" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Email about Dubai</a>
+          <a href="mailto:hello@speechbridge.co.uk?subject=Dubai%20enquiry" class="px-4 py-2 rounded-lg btn-brand">Email about Dubai</a>
         </div>
       </div>
     </div>
@@ -296,11 +312,11 @@
     <div class="grid md:grid-cols-3 gap-8 items-stretch">
       <div class="card p-6 md:col-span-2">
         <h3 class="font-semibold text-lg mb-2">Get in touch</h3>
-        <p class="text-slate-600">Send a short note with your name, your setting, and a brief summary of what you need. I will reply with available times and next steps.</p>
+        <p class="subtitle">Send a short note with your name, your setting, and a brief summary of what you need. I will reply with available times and next steps.</p>
         <div class="flex flex-wrap gap-3 mt-4">
-          <a href="mailto:hello@speechbridge.co.uk?subject=Enquiry%20from%20Speechbridge%20website" class="px-4 py-2 rounded-lg bg-slate-900 text-white">Email</a>
-          <a href="tel:+44XXXXXXXXXX" class="px-4 py-2 rounded-lg">Call</a>
-          <a href="https://wa.me/44XXXXXXXXXX" class="px-4 py-2 rounded-lg border">WhatsApp</a>
+          <a href="mailto:hello@speechbridge.co.uk?subject=Enquiry%20from%20Speechbridge%20website" class="px-4 py-2 rounded-lg btn-brand">Email</a>
+          <a href="tel:+44XXXXXXXXXX" class="px-4 py-2 rounded-lg btn-outline-brand">Call</a>
+          <a href="https://wa.me/44XXXXXXXXXX" class="px-4 py-2 rounded-lg btn-outline-brand">WhatsApp</a>
         </div>
       </div>
       <div class="card p-6 text-sm space-y-2">
@@ -313,10 +329,10 @@
 
   <!-- Footer -->
   <footer class="border-t">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-slate-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm subtitle">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
-          <div class="font-medium text-slate-900">Speechbridge</div>
+          <div class="font-medium text-[var(--brand-800)]">Speechbridge</div>
           <div>© 2025 Speechbridge. All rights reserved.</div>
         </div>
         <div class="flex gap-6">
@@ -329,6 +345,6 @@
 
   <!-- Floating CTA -->
   <a href="mailto:hello@speechbridge.co.uk?subject=Enquiry%20from%20Speechbridge%20website"
-     class="fixed bottom-4 right-4 px-4 py-3 rounded-lg bg-slate-900 text-white shadow-soft">Email now</a>
+     class="fixed bottom-4 right-4 px-4 py-3 rounded-lg shadow-soft btn-brand">Email now</a>
 </body>
 </html>
