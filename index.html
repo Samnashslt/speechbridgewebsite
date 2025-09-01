@@ -12,11 +12,10 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    section { scroll-margin-top: 5rem; } /* offset for sticky header */
+    section { scroll-margin-top: 5rem; }
     .card { border-radius: 1rem; border: 1px solid rgb(229 231 235); }
     .shadow-soft { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
     .badge { display:inline-block; padding:.25rem .6rem; font-size:.8rem; border:1px solid rgb(229 231 235); border-radius:9999px; margin-right:.5rem; margin-bottom:.5rem; }
-    /* Hide sections until their anchor is targeted */
     .hideable { display: none; }
     .hideable:target { display: block; }
   </style>
@@ -31,7 +30,7 @@
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#home" class="hover:underline underline-offset-4">Home</a>
-        <a href="#about" class="hover:underline underline-offset-4">About</a>
+        <a href="about.html" class="hover:underline underline-offset-4">About Sam</a>
         <a href="#services" class="hover:underline underline-offset-4">Services</a>
         <a href="#families" class="hover:underline underline-offset-4">Families</a>
         <a href="#schools" class="hover:underline underline-offset-4">Nurseries and Schools</a>
@@ -118,29 +117,6 @@
         <a href="#professionals" class="mt-6 px-4 py-2 rounded-lg bg-slate-900 text-white text-center">View details</a>
       </div>
     </div>
-  </section>
-
-  <!-- About (hidden until clicked) -->
-  <section id="about" class="hideable max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <div class="mb-8">
-      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Samantha Nash</h2>
-      <p class="mt-2 text-slate-600 max-w-3xl">Twenty years of practice across homes, clinics, and schools in the UK and UAE</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-2 space-y-4">
-        <p>I am a qualified speech and language therapist and work with babies, children, teenagers, and young adults.</p>
-        <ul class="space-y-2">
-          <li class="flex gap-2"><span>•</span><span>Calm, friendly approach that helps families feel at ease</span></li>
-          <li class="flex gap-2"><span>•</span><span>Clear plans with measurable goals</span></li>
-          <li class="flex gap-2"><span>•</span><span>Close work with schools, teachers, and support staff</span></li>
-          <li class="flex gap-2"><span>•</span><span>Training that builds confidence and practical skills</span></li>
-        </ul>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1555421689-43cad7100751?q=80&w=1200&auto=format&fit=crop" alt="About Speechbridge" class="w-full h-64 object-cover rounded-2xl shadow-soft">
-      </div>
-    </div>
-    <div class="mt-8"><a href="#home" class="underline">Back to Home</a></div>
   </section>
 
   <!-- Families detail -->
@@ -287,7 +263,7 @@
           <div>© 2025 Speechbridge. All rights reserved.</div>
         </div>
         <div class="flex gap-6">
-          <a href="#about" class="hover:underline">About</a>
+          <a href="about.html" class="hover:underline">About Sam</a>
           <a href="#contact" class="hover:underline">Contact</a>
         </div>
       </div>
