@@ -25,13 +25,12 @@
     .card { border-radius: 1rem; border: 1px solid rgb(229 231 235); }
     .shadow-soft { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
     .badge { display:inline-block; padding:.25rem .6rem; font-size:.8rem; border:1px solid rgb(229 231 235); border-radius:9999px; margin-right:.5rem; margin-bottom:.5rem; }
-    .hideable { display: none; }
-    .hideable:target { display: block; }
     .btn-brand { background: var(--brand); color:#fff; }
     .btn-brand:hover { background: var(--brand-700); }
     .btn-outline-brand { border:2px solid var(--brand); color:var(--brand); }
     .btn-outline-brand:hover { background: var(--brand); color:#fff; }
-    .link-like { text-decoration: underline; }
+    .hideable { display: none; }
+    .hideable:target { display: block; }
   </style>
 </head>
 <body class="min-h-screen bg-white">
@@ -86,9 +85,7 @@
       <!-- Families -->
       <div class="card p-6 flex flex-col h-full">
         <h3 class="text-xl font-semibold mb-2">Families</h3>
-        <p class="subtitle">
-          Assessment, therapy, and guidance for speech, language, communication, and eating and drinking
-        </p>
+        <p class="subtitle">Assessment, therapy, and guidance for speech, language, communication, and eating and drinking</p>
         <div class="mt-4">
           <span class="badge">Speech &amp; language</span>
           <span class="badge">AAC</span>
@@ -101,9 +98,7 @@
       <!-- Nurseries and Schools -->
       <div class="card p-6 flex flex-col h-full">
         <h3 class="text-xl font-semibold mb-2">Nurseries and Schools</h3>
-        <p class="subtitle">
-          On site child screening, assessments and therapy. Staff training, support, and tailored, individualised programmes
-        </p>
+        <p class="subtitle">On site child screening, assessments and therapy. Staff training, support, and tailored, individualised programmes</p>
         <div class="mt-4">
           <span class="badge">In-class support</span>
           <span class="badge">Free screening</span>
@@ -118,9 +113,7 @@
       <!-- Professionals -->
       <div class="card p-6 flex flex-col h-full">
         <h3 class="text-xl font-semibold mb-2">Professionals</h3>
-        <p class="subtitle">
-          Supervision, interview prep, and mentoring for newly qualified and experienced speech therapists
-        </p>
+        <p class="subtitle">Supervision, interview prep, and mentoring for newly qualified and experienced speech therapists</p>
         <div class="mt-4">
           <span class="badge">Practical</span>
           <span class="badge">Reflective</span>
@@ -138,8 +131,8 @@
   <section id="families" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Families</h2>
+      <p class="mt-2 subtitle">Home and school based assessment and therapy. Sessions can also be online.</p>
     </div>
-    <p class="mt-2 subtitle">Home and school based assessment and therapy. Sessions can also be online.</p>
     <div class="grid md:grid-cols-2 gap-8 mt-6">
       <div class="card p-6">
         <h3 class="font-semibold text-lg mb-2">How I can help</h3>
@@ -154,33 +147,21 @@
         <h3 class="font-semibold text-lg mb-2">Publications and handouts</h3>
         <div class="mb-3"></div>
         <ul class="space-y-2">
-          <li>
-            <a class="underline" href="publications/SPEECHBRIDGEdevchart.pdf" target="_blank" rel="noopener">
-              Speech and Language Developmental Chart (PDF)
-            </a>
-          </li>
-          <li>
-            <a class="underline" href="publications/SPEECHBRIDGEgames%20.pdf" target="_blank" rel="noopener">
-              Attention and Listening Games (PDF)
-            </a>
-          </li>
-          <li>
-            <a class="underline" href="publications/SPEECHBRIDGEnewterm.pdf" target="_blank" rel="noopener">
-              Communication Tips for the Beginning of a New Term (PDF)
-            </a>
-          </li>
+          <li><a class="underline" href="publications/SPEECHBRIDGEdevchart.pdf" target="_blank" rel="noopener">Speech and Language Developmental Chart (PDF)</a></li>
+          <li><a class="underline" href="publications/SPEECHBRIDGEgames%20.pdf" target="_blank" rel="noopener">Attention and Listening Games (PDF)</a></li>
+          <li><a class="underline" href="publications/SPEECHBRIDGEnewterm.pdf" target="_blank" rel="noopener">Communication Tips for the Beginning of a New Term (PDF)</a></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Nurseries and Schools -->
+  <!-- Nurseries and Schools (alignment fixed) -->
   <section id="schools" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Nurseries and Schools</h2>
+      <p class="mt-2 subtitle">Tailored intervention to meet communication and eating and drinking needs of the children.</p>
     </div>
-    <p class="mt-2 subtitle max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">Tailored intervention to meet communication and eating and drinking needs of the children.</p>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-1 gap-8 mt-6">
+    <div class="grid md:grid-cols-1 gap-8">
       <div class="card p-6">
         <h3 class="font-semibold text-lg mb-2">What I offer</h3>
         <ul class="list-disc pl-5 space-y-1">
@@ -227,39 +208,55 @@
     </div>
   </section>
 
-  <!-- Unified Testimonials slider -->
+  <!-- Unified Testimonials: mobile slider, desktop grid so nothing is cut off -->
   <section id="testimonials" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-6">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">What people are saying..</h2>
     </div>
-    <div class="relative">
-      <div id="carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-2 scroll-smooth">
-        <!-- Slide 1 - Parent -->
-        <article class="card snap-start shrink-0 w-[88%] md:w-[48%] lg:w-[32%] p-6">
+
+    <!-- Desktop grid ensures full visibility -->
+    <div class="hidden md:grid md:grid-cols-3 gap-6">
+      <article class="card p-6">
+        <p class="italic">Samantha has been an incredible support for our son, who was struggling with his speech and lagging behind his peers. From the very beginning, her kindness and warmth made him feel at ease, and he thoroughly enjoyed the learning process. In just a few months, we have witnessed remarkable progress in his communication skills and confidence.</p>
+        <p class="italic mt-3">Samantha not only provided invaluable tips for us to implement at home but also approached everything with such calmness and care, making the journey less daunting for both our son and us as parents. For anyone feeling concerned, Samantha’s expertise and gentle manner truly make all the difference.</p>
+        <div class="mt-3 text-sm subtitle">(Parent)</div>
+      </article>
+      <article class="card p-6">
+        <p class="italic">I cannot begin to tell you how thankful we are. To be able to now have full conversations with our little boy, knowing that he understands us fills us with such joy and you have done that for us, so thank you. The videos, patience, the kindness you have shown is something we are so thankful for.</p>
+        <div class="mt-3 text-sm subtitle">(Parent)</div>
+      </article>
+      <article class="card p-6">
+        <p class="italic">As a Band 7 SLT, I found Sam’s supervision invaluable. We reviewed a complex caseload with a focus on dysphagia, and I left each session with clear, practical actions and greater confidence.</p>
+        <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
+      </article>
+      <article class="card p-6 md:col-span-3">
+        <p class="italic">Sam’s supervision helped me refine my caseload management and shape presentations for a conference. Her feedback was specific, constructive, and boosted the quality of my delivery.</p>
+        <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
+      </article>
+    </div>
+
+    <!-- Mobile horizontal scroll -->
+    <div class="md:hidden relative">
+      <div id="carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-2 pr-4 scroll-smooth">
+        <article class="card snap-start shrink-0 w-[88%] p-6">
           <p class="italic">Samantha has been an incredible support for our son, who was struggling with his speech and lagging behind his peers. From the very beginning, her kindness and warmth made him feel at ease, and he thoroughly enjoyed the learning process. In just a few months, we have witnessed remarkable progress in his communication skills and confidence.</p>
           <p class="italic mt-3">Samantha not only provided invaluable tips for us to implement at home but also approached everything with such calmness and care, making the journey less daunting for both our son and us as parents. For anyone feeling concerned, Samantha’s expertise and gentle manner truly make all the difference.</p>
           <div class="mt-3 text-sm subtitle">(Parent)</div>
         </article>
-        <!-- Slide 2 - Parent -->
-        <article class="card snap-start shrink-0 w-[88%] md:w-[48%] lg:w-[32%] p-6">
+        <article class="card snap-start shrink-0 w-[88%] p-6">
           <p class="italic">I cannot begin to tell you how thankful we are. To be able to now have full conversations with our little boy, knowing that he understands us fills us with such joy and you have done that for us, so thank you. The videos, patience, the kindness you have shown is something we are so thankful for.</p>
           <div class="mt-3 text-sm subtitle">(Parent)</div>
         </article>
-        <!-- Slide 3 - SLT supervisee -->
-        <article class="card snap-start shrink-0 w-[88%] md:w-[48%] lg:w-[32%] p-6">
+        <article class="card snap-start shrink-0 w-[88%] p-6">
           <p class="italic">As a Band 7 SLT, I found Sam’s supervision invaluable. We reviewed a complex caseload with a focus on dysphagia, and I left each session with clear, practical actions and greater confidence.</p>
           <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
         </article>
-        <!-- Slide 4 - SLT supervisee -->
-        <article class="card snap-start shrink-0 w-[88%] md:w-[48%] lg:w-[32%] p-6">
+        <article class="card snap-start shrink-0 w-[88%] p-6">
           <p class="italic">Sam’s supervision helped me refine my caseload management and shape presentations for a conference. Her feedback was specific, constructive, and boosted the quality of my delivery.</p>
           <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
         </article>
-      </div>
-      <div class="mt-4 flex items-center justify-between">
-        <button class="px-4 py-2 rounded-lg btn-outline-brand" onclick="scrollCarousel(-1)">Prev</button>
-        <div class="text-sm subtitle">Swipe on mobile or use the arrows</div>
-        <button class="px-4 py-2 rounded-lg btn-outline-brand" onclick="scrollCarousel(1)">Next</button>
+        <!-- end spacer so last card is fully visible -->
+        <div class="shrink-0 w-2" aria-hidden="true"></div>
       </div>
     </div>
   </section>
@@ -303,21 +300,9 @@
     <div class="grid md:grid-cols-1 gap-8">
       <div class="card p-6">
         <ul class="space-y-3">
-          <li>
-            <a class="underline" href="publications/rcslt-early-years-factsheet.pdf" target="_blank" rel="noopener">
-              RCSLT Early Years Factsheet (PDF)
-            </a>
-          </li>
-          <li>
-            <a class="underline" href="publications/universally_speaking_5-11_final.pdf" target="_blank" rel="noopener">
-              Universally Speaking 5 to 11 Guide (PDF)
-            </a>
-          </li>
-          <li>
-            <a class="underline" href="publications/SPEECHBRIDGEFAQs.pdf" target="_blank" rel="noopener">
-              Speechbridge FAQs (PDF)
-            </a>
-          </li>
+          <li><a class="underline" href="publications/rcslt-early-years-factsheet.pdf" target="_blank" rel="noopener">RCSLT Early Years Factsheet (PDF)</a></li>
+          <li><a class="underline" href="publications/universally_speaking_5-11_final.pdf" target="_blank" rel="noopener">Universally Speaking 5 to 11 Guide (PDF)</a></li>
+          <li><a class="underline" href="publications/SPEECHBRIDGEFAQs.pdf" target="_blank" rel="noopener">Speechbridge FAQs (PDF)</a></li>
         </ul>
       </div>
     </div>
@@ -348,7 +333,7 @@
 
   <!-- Footer -->
   <footer class="border-t">
-    <div class="max-w-6xl mx:auto px-4 sm:px-6 lg:px-8 py-10 text-sm subtitle">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm subtitle">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div class="font-medium text-[var(--brand-800)]">Speechbridge</div>
@@ -365,16 +350,14 @@
   <a href="#" onclick="openContactModal(event)"
      class="fixed bottom-4 right-4 px-4 py-3 rounded-lg shadow-soft btn-brand">Email now</a>
 
-  <!-- Contact Modal -->
+  <!-- Contact Modal (email copy, phone tel link stays as-is for the home page) -->
   <div id="contactModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
     <div class="absolute inset-0 bg-black/50" onclick="closeContactModal()" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
       <div class="flex items-start justify-between gap-6">
         <div>
           <h3 id="contactModalTitle" class="text-xl font-semibold">Get in touch</h3>
-          <p class="subtitle mt-1 text-sm">
-            Typical response time 24 to 48 hours. Usual availability weekdays 9:00 to 17:00 UK time.
-          </p>
+          <p class="subtitle mt-1 text-sm">Typical response time 24 to 48 hours. Usual availability weekdays 9:00 to 17:00 UK time.</p>
         </div>
         <button id="contactClose" onclick="closeContactModal()" class="px-3 py-1 rounded-lg btn-outline-brand text-sm">Close</button>
       </div>
@@ -412,9 +395,7 @@
       document.body.style.overflow = '';
     }
     document.addEventListener('keydown', function(ev){
-      if(ev.key === 'Escape'){
-        closeContactModal();
-      }
+      if(ev.key === 'Escape'){ closeContactModal(); }
     });
     function copyEmail(e){
       if(e) e.preventDefault();
@@ -423,29 +404,15 @@
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(function(){
           if (msg) { msg.textContent = 'Copied!'; setTimeout(()=> msg.textContent='', 2000); }
-        }).catch(function(){
-          fallbackCopyText(email, msg);
-        });
-      } else {
-        fallbackCopyText(email, msg);
-      }
+        }).catch(function(){ fallbackCopyText(email, msg); });
+      } else { fallbackCopyText(email, msg); }
     }
     function fallbackCopyText(text, msgEl){
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.setAttribute('readonly', '');
-      ta.style.position = 'absolute';
-      ta.style.left = '-9999px';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(()=> msgEl.textContent='', 2000); } }
-      catch(e) { if (msgEl) { msgEl.textContent = 'Copy not supported'; } }
+      const ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly',''); ta.style.position='absolute'; ta.style.left='-9999px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); if (msgEl) { msgEl.textContent='Copied!'; setTimeout(()=> msgEl.textContent='', 2000); } }
+      catch(e) { if (msgEl) { msgEl.textContent='Copy not supported'; } }
       document.body.removeChild(ta);
-    }
-    function scrollCarousel(direction){
-      const c = document.getElementById('carousel');
-      const amount = c.clientWidth * 0.9;
-      c.scrollBy({ left: direction > 0 ? amount : -amount, behavior: 'smooth' });
     }
   </script>
 </body>
