@@ -35,7 +35,7 @@
   <header class="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
       <a href="index.html#home" class="flex items-center gap-2">
-        <!-- Reverted to original small toolbar logo -->
+        <!-- Small toolbar logo (unchanged) -->
         <img src="logo.png" alt="Speechbridge logo" class="h-8 w-auto object-contain">
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -83,7 +83,7 @@
         </div>
       </div>
 
-      <!-- Photo card aligned with heading, same size as image -->
+      <!-- Photo card aligned with heading, card fits image -->
       <div class="justify-self-stretch">
         <div class="rounded-2xl border shadow-soft overflow-hidden">
           <img
@@ -159,9 +159,10 @@
         </div>
         <div class="rounded-xl border p-4">
           <div class="text-xs uppercase tracking-wide subtitle mb-1">Phone</div>
-          <a class="underline text-lg" href="tel:+447868211705" title="Tap to call">
+          <button id="phoneCopyLink" class="underline text-lg" onclick="copyPhone(event)" title="Click to copy">
             +44 (0)7868 211705
-          </a>
+          </button>
+          <span id="phoneCopyMsg" class="ml-2 text-sm" aria-live="polite"></span>
         </div>
       </div>
     </div>
@@ -186,18 +187,28 @@
         closeContactModal();
       }
     });
+
     function copyEmail(e){
       if(e) e.preventDefault();
       const email = 'samnashslt@gmail.com';
       const msg = document.getElementById('emailCopyMsg');
+      copyToClipboard(email, msg);
+    }
+    function copyPhone(e){
+      if(e) e.preventDefault();
+      const phone = '+44 (0)7868 211705';
+      const msg = document.getElementById('phoneCopyMsg');
+      copyToClipboard(phone, msg);
+    }
+    function copyToClipboard(text, msgEl){
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(function(){
-          if (msg) { msg.textContent = 'Copied!'; setTimeout(()=> msg.textContent='', 2000); }
+        navigator.clipboard.writeText(text).then(function(){
+          if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(()=> msgEl.textContent = '', 2000); }
         }).catch(function(){
-          fallbackCopyText(email, msg);
+          fallbackCopyText(text, msgEl);
         });
       } else {
-        fallbackCopyText(email, msg);
+        fallbackCopyText(text, msgEl);
       }
     }
     function fallbackCopyText(text, msgEl){
@@ -208,8 +219,12 @@
       ta.style.left = '-9999px';
       document.body.appendChild(ta);
       ta.select();
-      try { document.execCommand('copy'); if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(()=> msgEl textContent='', 2000); } }
-      catch(e) { if (msgEl) { msgEl.textContent = 'Copy not supported'; } }
+      try {
+        document.execCommand('copy');
+        if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(()=> msgEl.textContent = '', 2000); }
+      } catch(e) {
+        if (msgEl) { msgEl.textContent = 'Copy not supported'; }
+      }
       document.body.removeChild(ta);
     }
   </script>
