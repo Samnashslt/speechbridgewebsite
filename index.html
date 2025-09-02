@@ -81,9 +81,9 @@
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">How I can help</h2>
     </div>
-    <div class="grid md:grid-cols-3 gap-6 items-stretch">
+    <div class="grid md:grid-cols-3 gap-6">
       <!-- Families -->
-      <div class="card p-6 flex flex-col h-full">
+      <div class="card p-6">
         <h3 class="text-xl font-semibold mb-2">Families</h3>
         <p class="subtitle">Assessment, therapy, and guidance for speech, language, communication, and eating and drinking</p>
         <div class="mt-4">
@@ -93,10 +93,10 @@
           <span class="badge">Fussy eaters</span>
           <span class="badge">Early intervention</span>
         </div>
-        <a href="#families" class="mt-auto px-4 py-2 rounded-lg text-center btn-brand">View details</a>
+        <a href="#families" class="inline-block mt-4 px-4 py-2 rounded-lg btn-brand">View details</a>
       </div>
       <!-- Nurseries and Schools -->
-      <div class="card p-6 flex flex-col h-full">
+      <div class="card p-6">
         <h3 class="text-xl font-semibold mb-2">Nurseries and Schools</h3>
         <p class="subtitle">On site child screening, assessments and therapy. Staff training, support, and tailored, individualised programmes</p>
         <div class="mt-4">
@@ -108,10 +108,10 @@
           <span class="badge">Conferences</span>
           <span class="badge">Coffee mornings</span>
         </div>
-        <a href="#schools" class="mt-auto px-4 py-2 rounded-lg text-center btn-brand">View details</a>
+        <a href="#schools" class="inline-block mt-4 px-4 py-2 rounded-lg btn-brand">View details</a>
       </div>
       <!-- Professionals -->
-      <div class="card p-6 flex flex-col h-full">
+      <div class="card p-6">
         <h3 class="text-xl font-semibold mb-2">Professionals</h3>
         <p class="subtitle">Supervision, interview prep, and mentoring for newly qualified and experienced speech therapists</p>
         <div class="mt-4">
@@ -122,7 +122,7 @@
           <span class="badge">Flexible</span>
           <span class="badge">Evidenced-based</span>
         </div>
-        <a href="#professionals" class="mt-auto px-4 py-2 rounded-lg text-center btn-brand">View details</a>
+        <a href="#professionals" class="inline-block mt-4 px-4 py-2 rounded-lg btn-brand">View details</a>
       </div>
     </div>
   </section>
@@ -208,54 +208,37 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
+  <!-- Testimonials slider (all sizes) -->
   <section id="testimonials" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-6">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">What people are saying..</h2>
     </div>
 
-    <!-- Desktop grid -->
-    <div class="hidden md:grid md:grid-cols-3 gap-6">
-      <article class="card p-6">
-        <p class="italic">Samantha has been an incredible support for our son, who was struggling with his speech and lagging behind his peers. From the very beginning, her kindness and warmth made him feel at ease, and he thoroughly enjoyed the learning process. In just a few months, we have witnessed remarkable progress in his communication skills and confidence.</p>
-        <p class="italic mt-3">Samantha not only provided invaluable tips for us to implement at home but also approached everything with such calmness and care, making the journey less daunting for both our son and us as parents. For anyone feeling concerned, Samantha’s expertise and gentle manner truly make all the difference.</p>
-        <div class="mt-3 text-sm subtitle">(Parent)</div>
-      </article>
-      <article class="card p-6">
-        <p class="italic">I cannot begin to tell you how thankful we are. To be able to now have full conversations with our little boy, knowing that he understands us fills us with such joy and you have done that for us, so thank you. The videos, patience, the kindness you have shown is something we are so thankful for.</p>
-        <div class="mt-3 text-sm subtitle">(Parent)</div>
-      </article>
-      <article class="card p-6">
-        <p class="italic">As a Band 7 SLT, I found Sam’s supervision invaluable. We reviewed a complex caseload with a focus on dysphagia, and I left each session with clear, practical actions and greater confidence.</p>
-        <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
-      </article>
-      <article class="card p-6 md:col-span-3">
-        <p class="italic">Sam’s supervision helped me refine my caseload management and shape presentations for a conference. Her feedback was specific, constructive, and boosted the quality of my delivery.</p>
-        <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
-      </article>
-    </div>
-
-    <!-- Mobile horizontal scroll -->
-    <div class="md:hidden relative">
-      <div id="carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-2 pr-4 scroll-smooth">
-        <article class="card snap-start shrink-0 w-[88%] p-6">
+    <div class="relative">
+      <div id="carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-2 pr-6 scroll-smooth">
+        <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">Samantha has been an incredible support for our son, who was struggling with his speech and lagging behind his peers. From the very beginning, her kindness and warmth made him feel at ease, and he thoroughly enjoyed the learning process. In just a few months, we have witnessed remarkable progress in his communication skills and confidence.</p>
           <p class="italic mt-3">Samantha not only provided invaluable tips for us to implement at home but also approached everything with such calmness and care, making the journey less daunting for both our son and us as parents. For anyone feeling concerned, Samantha’s expertise and gentle manner truly make all the difference.</p>
           <div class="mt-3 text-sm subtitle">(Parent)</div>
         </article>
-        <article class="card snap-start shrink-0 w-[88%] p-6">
+
+        <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">I cannot begin to tell you how thankful we are. To be able to now have full conversations with our little boy, knowing that he understands us fills us with such joy and you have done that for us, so thank you. The videos, patience, the kindness you have shown is something we are so thankful for.</p>
           <div class="mt-3 text-sm subtitle">(Parent)</div>
         </article>
-        <article class="card snap-start shrink-0 w-[88%] p-6">
+
+        <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">As a Band 7 SLT, I found Sam’s supervision invaluable. We reviewed a complex caseload with a focus on dysphagia, and I left each session with clear, practical actions and greater confidence.</p>
           <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
         </article>
-        <article class="card snap-start shrink-0 w-[88%] p-6">
+
+        <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">Sam’s supervision helped me refine my caseload management and shape presentations for a conference. Her feedback was specific, constructive, and boosted the quality of my delivery.</p>
           <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
         </article>
-        <div class="shrink-0 w-2" aria-hidden="true"></div>
+
+        <!-- Spacer so last card is fully in view -->
+        <div class="shrink-0 w-4" aria-hidden="true"></div>
       </div>
     </div>
   </section>
@@ -349,7 +332,7 @@
   <a href="#" onclick="openContactModal(event)"
      class="fixed bottom-4 right-4 px-4 py-3 rounded-lg shadow-soft btn-brand">Email now</a>
 
-  <!-- Contact Modal (both copy to clipboard now) -->
+  <!-- Contact Modal (both copy to clipboard) -->
   <div id="contactModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
     <div class="absolute inset-0 bg-black/50" onclick="closeContactModal()" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
