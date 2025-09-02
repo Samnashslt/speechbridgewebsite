@@ -63,7 +63,13 @@
         <div class="p-4 border-b">
           <h2 class="text-lg font-semibold">Samantha Nash, Speechbridge</h2>
         </div>
-        <img src="sampic.png" alt="Samantha Nash headshot" class="w-full h-64 object-cover">
+        <!-- Tries sampic.png in this folder, falls back to images/sampic.png -->
+        <img
+          src="sampic.png?v=1"
+          alt="Samantha Nash headshot"
+          class="w-full h-64 object-cover"
+          onerror="this.onerror=null; this.src='images/sampic.png?v=1';"
+        >
       </div>
     </div>
   </section>
@@ -96,19 +102,21 @@
         </div>
       </div>
 
-      <!-- Keep the photo visible on smaller screens too -->
+      <!-- Optional secondary photo on large screens if you want it twice
       <div class="hidden md:block">
         <div class="card shadow-soft overflow-hidden">
           <div class="p-4 border-b">
             <h2 class="text-base font-semibold">Samantha Nash, Speechbridge</h2>
           </div>
-          <img src="sampic.png" alt="Samantha Nash headshot" class="w-full h-64 object-cover">
+          <img src="sampic.png?v=1" alt="Samantha Nash headshot" class="w-full h-64 object-cover"
+               onerror="this.onerror=null; this.src='images/sampic.png?v=1';">
         </div>
       </div>
+      -->
     </div>
   </section>
 
-  <!-- Contact (same layout as Home) -->
+  <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Contact</h2>
