@@ -28,10 +28,6 @@
     .btn-outline-brand:hover { background: var(--brand); color:#fff; }
     .btn-brand { background: var(--brand); color:#fff; }
     .btn-brand:hover { background: var(--brand-700); }
-
-    /* Match logo and headshot heights */
-    .logo-img { height: 110px; }
-    @media (min-width: 768px) { .logo-img { height: 140px; } }
   </style>
 </head>
 <body class="min-h-screen bg-white">
@@ -39,7 +35,8 @@
   <header class="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
       <a href="index.html#home" class="flex items-center gap-2">
-        <img src="logo.png" alt="Speechbridge logo" class="logo-img w-auto object-contain">
+        <!-- Reverted to original small toolbar logo -->
+        <img src="logo.png" alt="Speechbridge logo" class="h-8 w-auto object-contain">
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html#home" class="hover:underline underline-offset-4">Home</a>
@@ -55,30 +52,6 @@
     </div>
   </header>
 
-  <!-- Top row: logo + photo card in line -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-    <div class="grid md:grid-cols-2 gap-6 items-center">
-      <!-- Speechbridge logo -->
-      <div class="flex items-center">
-        <img src="logo.png" alt="Speechbridge logo" class="logo-img w-auto object-contain">
-      </div>
-      <!-- Photo card with matched height -->
-      <div class="card shadow-soft overflow-hidden">
-        <div class="p-3 border-b">
-          <h2 class="text-base md:text-lg font-semibold">Samantha Nash, Speechbridge</h2>
-        </div>
-        <div class="p-3">
-          <img
-            src="publications/sampic.png?v=1"
-            alt="Samantha Nash headshot"
-            class="logo-img w-auto mx-auto rounded-xl object-cover"
-            onerror="this.onerror=null; this.src='sampic.png?v=1'; setTimeout(()=>{ this.src='images/sampic.png?v=1'; },0);"
-          >
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- About content -->
   <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="mb-6">
@@ -87,6 +60,7 @@
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 items-start">
+      <!-- Text -->
       <div class="md:col-span-2 space-y-4">
         <p>I am a qualified speech and language therapist and work with babies, children, teenagers, and young adults.</p>
         <ul class="space-y-2">
@@ -109,17 +83,17 @@
         </div>
       </div>
 
-      <!-- Optional secondary photo block for large screens - keep commented if not needed
-      <div class="hidden md:block">
-        <div class="card shadow-soft overflow-hidden">
-          <div class="p-4 border-b">
-            <h2 class="text-base font-semibold">Samantha Nash, Speechbridge</h2>
-          </div>
-          <img src="publications/sampic.png?v=1" alt="Samantha Nash headshot" class="logo-img w-auto mx-auto rounded-xl object-cover"
-               onerror="this.onerror=null; this.src='sampic.png?v=1'; setTimeout(()=>{ this.src='images/sampic.png?v=1'; },0);">
+      <!-- Photo card aligned with heading, same size as image -->
+      <div class="justify-self-stretch">
+        <div class="rounded-2xl border shadow-soft overflow-hidden">
+          <img
+            src="publications/sampic.png?v=1"
+            alt="Samantha Nash headshot"
+            class="w-full h-auto block"
+            onerror="this.onerror=null; this.src='sampic.png?v=1'; setTimeout(()=>{ this.src='images/sampic.png?v=1'; },0);"
+          >
         </div>
       </div>
-      -->
     </div>
   </section>
 
@@ -234,7 +208,7 @@
       ta.style.left = '-9999px';
       document.body.appendChild(ta);
       ta.select();
-      try { document.execCommand('copy'); if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(()=> msgEl.textContent='', 2000); } }
+      try { document.execCommand('copy'); if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(()=> msgEl textContent='', 2000); } }
       catch(e) { if (msgEl) { msgEl.textContent = 'Copy not supported'; } }
       document.body.removeChild(ta);
     }
