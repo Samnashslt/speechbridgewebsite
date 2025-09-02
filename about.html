@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About Sam | Speechbridge</title>
-  <meta name="description" content="About Samantha Nash. Twenty years of practice across homes, clinics, and schools in the UK and UAE." />
+  <meta name="description" content="About Samantha Nash. Twenty years of practice across homes, clinics, and schools in the UK and Dubai." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,6 +28,10 @@
     .btn-outline-brand:hover { background: var(--brand); color:#fff; }
     .btn-brand { background: var(--brand); color:#fff; }
     .btn-brand:hover { background: var(--brand-700); }
+
+    /* Match logo and headshot heights */
+    .logo-img { height: 110px; }
+    @media (min-width: 768px) { .logo-img { height: 140px; } }
   </style>
 </head>
 <body class="min-h-screen bg-white">
@@ -35,7 +39,7 @@
   <header class="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
       <a href="index.html#home" class="flex items-center gap-2">
-        <img src="logo.png" alt="Speechbridge logo" class="h-8 w-auto object-contain">
+        <img src="logo.png" alt="Speechbridge logo" class="logo-img w-auto object-contain">
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html#home" class="hover:underline underline-offset-4">Home</a>
@@ -55,21 +59,22 @@
   <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
     <div class="grid md:grid-cols-2 gap-6 items-center">
       <!-- Speechbridge logo -->
-      <div>
-        <img src="logo.png" alt="Speechbridge logo" class="w-full max-w-[520px] object-contain">
+      <div class="flex items-center">
+        <img src="logo.png" alt="Speechbridge logo" class="logo-img w-auto object-contain">
       </div>
-      <!-- Photo card -->
+      <!-- Photo card with matched height -->
       <div class="card shadow-soft overflow-hidden">
-        <div class="p-4 border-b">
-          <h2 class="text-lg font-semibold">Samantha Nash, Speechbridge</h2>
+        <div class="p-3 border-b">
+          <h2 class="text-base md:text-lg font-semibold">Samantha Nash, Speechbridge</h2>
         </div>
-        <!-- Load headshot from publications folder with simple fallbacks -->
-        <img
-          src="publications/sampic.png?v=1"
-          alt="Samantha Nash headshot"
-          class="w-full h-64 object-cover"
-          onerror="this.onerror=null; this.src='sampic.png?v=1'; setTimeout(()=>{ this.src='images/sampic.png?v=1'; },0);"
-        >
+        <div class="p-3">
+          <img
+            src="publications/sampic.png?v=1"
+            alt="Samantha Nash headshot"
+            class="logo-img w-auto mx-auto rounded-xl object-cover"
+            onerror="this.onerror=null; this.src='sampic.png?v=1'; setTimeout(()=>{ this.src='images/sampic.png?v=1'; },0);"
+          >
+        </div>
       </div>
     </div>
   </section>
@@ -78,7 +83,7 @@
   <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="mb-6">
       <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Samantha Nash</h1>
-      <p class="mt-2 subtitle max-w-3xl">Twenty years of practice across homes, clinics, and schools in the UK and UAE</p>
+      <p class="mt-2 subtitle max-w-3xl">Twenty years of practice across homes, clinics, and schools in the UK and Dubai</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 items-start">
@@ -104,13 +109,13 @@
         </div>
       </div>
 
-      <!-- Optional secondary photo block for large screens - remove if not needed
+      <!-- Optional secondary photo block for large screens - keep commented if not needed
       <div class="hidden md:block">
         <div class="card shadow-soft overflow-hidden">
           <div class="p-4 border-b">
             <h2 class="text-base font-semibold">Samantha Nash, Speechbridge</h2>
           </div>
-          <img src="publications/sampic.png?v=1" alt="Samantha Nash headshot" class="w-full h-64 object-cover"
+          <img src="publications/sampic.png?v=1" alt="Samantha Nash headshot" class="logo-img w-auto mx-auto rounded-xl object-cover"
                onerror="this.onerror=null; this.src='sampic.png?v=1'; setTimeout(()=>{ this.src='images/sampic.png?v=1'; },0);">
         </div>
       </div>
