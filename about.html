@@ -25,6 +25,9 @@
     .card { border-radius: 1rem; border: 1px solid rgb(229 231 235); }
     .shadow-soft { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
     .btn-outline-brand { border:2px solid var(--brand); color:var(--brand); }
+    .btn-outline-brand:hover { background: var(--brand); color:#fff; }
+    .btn-brand { background: var(--brand); color:#fff; }
+    .btn-brand:hover { background: var(--brand-700); }
   </style>
 </head>
 <body class="min-h-screen bg-white">
@@ -66,16 +69,36 @@
         </ul>
       </div>
       <div>
-        <!-- Replaced stock photo with your uploaded headshot -->
+        <!-- Your uploaded headshot -->
         <img
-          src="about-sam.jpg"
+          src="sampic.png"
           alt="Samantha Nash, Speechbridge"
           class="w-full h-64 object-cover rounded-2xl shadow-soft"
         >
       </div>
     </div>
-    <div class="mt-8">
-      <a href="index.html" class="underline">Back to Home</a>
+  </section>
+
+  <!-- Contact (same layout as Home) -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Contact</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+      <div class="card p-6 md:col-span-2">
+        <h3 class="font-semibold text-lg mb-2">Get in touch</h3>
+        <p class="subtitle">Send a short note with your name, your setting, and a brief summary of what you need. I will reply with available times and next steps.</p>
+        <div class="flex flex-wrap gap-3 mt-4">
+          <a href="#" onclick="openContactModal(event)" class="px-4 py-2 rounded-lg btn-brand">Email</a>
+          <a href="#" onclick="openContactModal(event)" class="px-4 py-2 rounded-lg btn-outline-brand">Call</a>
+          <a href="https://wa.me/447868211705" title="WhatsApp +44 (0)7868 211705" class="px-4 py-2 rounded-lg btn-outline-brand">WhatsApp</a>
+        </div>
+      </div>
+      <div class="card p-6 text-sm space-y-2">
+        <div>Based in the UK and Dubai.</div>
+        <div>Fully qualified and registered with HCPC and RCSLT</div>
+        <div>Enhanced DBS, safeguarding training, insurance.</div>
+      </div>
     </div>
   </section>
 
