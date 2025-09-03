@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About Sam | Speechbridge</title>
-  <meta name="description" content="About Samantha Nash. Twenty years of practice across homes, clinics, and schools in the UK and Dubai." />
+  <meta name="description" content="Learn about Samantha Nash, Speech and Language Therapist at Speechbridge. Experience across homes, clinics and schools in the UK and Dubai. Expertise in dysphagia, AAC, complex needs, and mentoring for professionals." />
+  <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,17 +20,19 @@
     }
     html { scroll-behavior: smooth; }
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); }
+    section { scroll-margin-top: 5rem; }
     h1,h2,h3 { color: var(--brand-800); }
     .subtitle { color:#2f746a; }
-    section { scroll-margin-top: 5rem; }
     .card { border-radius: 1rem; border: 1px solid rgb(229 231 235); }
     .shadow-soft { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
-    .btn-outline-brand { border:2px solid var(--brand); color:var(--brand); }
-    .btn-outline-brand:hover { background: var(--brand); color:#fff; }
+    .badge { display:inline-block; padding:.25rem .6rem; font-size:.8rem; border:1px solid rgb(229 231 235); border-radius:9999px; margin-right:.5rem; margin-bottom:.5rem; }
     .btn-brand { background: var(--brand); color:#fff; }
     .btn-brand:hover { background: var(--brand-700); }
+    .btn-outline-brand { border:2px solid var(--brand); color:var(--brand); }
+    .btn-outline-brand:hover { background: var(--brand); color:#fff; }
   </style>
 </head>
+
 <body class="min-h-screen bg-white">
   <!-- Header -->
   <header class="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
@@ -51,52 +54,53 @@
     </div>
   </header>
 
-  <!-- About content -->
-  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <div class="mb-6">
-      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Samantha Nash</h1>
-      <p class="mt-2 subtitle max-w-3xl">Twenty years of practice across homes, clinics, and schools in the UK and Dubai</p>
-    </div>
+  <!-- Hero -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--brand-50)] to-white"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid md:grid-cols-3 gap-10 items-start">
+        <!-- Text -->
+        <div class="md:col-span-2">
+          <h1 class="text-4xl md:text-5xl font-semibold leading-tight">About Sam</h1>
+          <p class="mt-4 text-lg subtitle">Twenty years of practice across homes, clinics, and schools in the UK and Dubai</p>
 
-    <div class="grid md:grid-cols-3 gap-8 items-start">
-      <!-- Text -->
-      <div class="md:col-span-2 space-y-4">
-        <p>I am a qualified speech and language therapist and work with babies, children, teenagers, and young adults.</p>
-        <ul class="space-y-2">
-          <li class="flex gap-2"><span>•</span><span>Calm, friendly approach that helps families feel at ease</span></li>
-          <li class="flex gap-2"><span>•</span><span>Clear plans with measurable goals</span></li>
-          <li class="flex gap-2"><span>•</span><span>Close work with schools, teachers, and support staff</span></li>
-          <li class="flex gap-2"><span>•</span><span>Training that builds confidence and practical skills</span></li>
-        </ul>
+          <div class="mt-6 space-y-4">
+            <p>
+              I am a qualified speech and language therapist. I work with babies, children, teenagers, and young adults, including those with complex communication needs.
+            </p>
+            <ul class="space-y-2">
+              <li>Calm, friendly approach that helps families feel at ease</li>
+              <li>Clear plans with measurable goals</li>
+              <li>Close work with schools, teachers, and support staff</li>
+              <li>Training that builds confidence and practical skills</li>
+            </ul>
 
-        <div class="mt-6">
-          <h3 class="text-xl font-semibold mb-2">Additional qualifications</h3>
-          <ul class="list-disc pl-5 space-y-1">
-            <li>Qualified dysphagia specialist</li>
-            <li>Hanan trained</li>
-            <li>Talktools trained</li>
-            <li>Sensory Integration trained</li>
-            <li>Makaton trained</li>
-            <li>Stage two British Sign Language</li>
-          </ul>
+            <div class="mt-6">
+              <h3 class="text-xl font-semibold mb-2">Additional qualifications</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Qualified dysphagia specialist</li>
+                <li>Hanen trained</li>
+                <li>TalkTools trained</li>
+                <li>Sensory Integration trained</li>
+                <li>Makaton trained</li>
+                <li>Stage two British Sign Language</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- Photo card fits image and aligns with heading -->
-      <div class="justify-self-stretch">
-        <div class="rounded-2xl border shadow-soft overflow-hidden">
-          <img
-            src="publications/sampic.png?v=1"
-            alt="Samantha Nash headshot"
-            class="w-full h-auto block"
-            onerror="this.onerror=null; this.src='sampic.png?v=1'; setTimeout(()=>{ this.src='images/sampic.png?v=1'; },0);"
-          >
+        <!-- Photo card -->
+        <div class="card p-4 self-start">
+          <img src="publications/sampic.png" alt="Samantha Nash headshot" class="w-full h-auto object-cover rounded-lg">
+          <div class="mt-3">
+            <div class="text-sm subtitle">Samantha Nash, Speechbridge</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact (matches home page, both copy-to-clipboard) -->
+  <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Contact</h2>
@@ -112,7 +116,7 @@
         </div>
       </div>
       <div class="card p-6 text-sm space-y-2">
-        <div>Based in the UK and Dubai.</div>
+        <div>Based in East Sussex, UK and Dubai.</div>
         <div>Fully qualified and registered with HCPC and RCSLT</div>
         <div>Enhanced DBS, safeguarding training, insurance.</div>
       </div>
@@ -128,13 +132,13 @@
           <div>© 2025 Speechbridge. All rights reserved.</div>
         </div>
         <div class="flex gap-6">
-          <a href="about.html" class="hover:underline">About Sam</a>
+          <a href="index.html#services" class="hover:underline">Services</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Contact Modal (both copy to clipboard) -->
+  <!-- Contact Modal (copy to clipboard) -->
   <div id="contactModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
     <div class="absolute inset-0 bg-black/50" onclick="closeContactModal()" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
@@ -161,11 +165,16 @@
           </button>
           <span id="phoneCopyMsg" class="ml-2 text-sm" aria-live="polite"></span>
         </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs uppercase tracking-wide subtitle mb-1">WhatsApp</div>
+          <a class="underline text-lg" href="https://wa.me/447868211705" title="Open WhatsApp">Message on WhatsApp</a>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
+    // Open/close contact modal
     function openContactModal(e){
       if(e) e.preventDefault();
       const m = document.getElementById('contactModal');
@@ -179,10 +188,8 @@
       m.classList.add('hidden');
       document.body.style.overflow = '';
     }
-    document.addEventListener('keydown', function(ev){
-      if(ev.key === 'Escape'){ closeContactModal(); }
-    });
 
+    // Copy helpers
     function copyEmail(e){
       if(e) e.preventDefault();
       const email = 'samnashslt@gmail.com';
@@ -198,7 +205,7 @@
     function copyToClipboard(text, msgEl){
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function(){
-          if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(()=> msgEl.textContent = '', 2000); }
+          if (msgEl) { msgEl.textContent = 'Copied!'; setTimeout(function(){ msgEl.textContent=''; }, 2000); }
         }).catch(function(){ fallbackCopyText(text, msgEl); });
       } else {
         fallbackCopyText(text, msgEl);
@@ -208,7 +215,7 @@
       const ta = document.createElement('textarea');
       ta.value = text; ta.setAttribute('readonly',''); ta.style.position='absolute'; ta.style.left='-9999px';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); if (msgEl) { msgEl.textContent='Copied!'; setTimeout(()=> msgEl.textContent='', 2000); } }
+      try { document.execCommand('copy'); if (msgEl) { msgEl.textContent='Copied!'; setTimeout(function(){ msgEl.textContent=''; }, 2000); } }
       catch(e) { if (msgEl) { msgEl.textContent='Copy not supported'; } }
       document.body.removeChild(ta);
     }
