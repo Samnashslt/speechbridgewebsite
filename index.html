@@ -141,7 +141,10 @@
           <li>Dysphagia, eating and drinking plans, safe swallow strategies</li>
           <li>AAC assessment and set up, parent guidance and device use, therapy</li>
         </ul>
-        <a href="#contact" class="inline-block mt-4 px-4 py-2 rounded-lg btn-brand">Check availability</a>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="#contact" class="px-4 py-2 rounded-lg btn-brand">Check availability</a>
+          <a href="#" onclick="openPricingModal(event)" class="px-4 py-2 rounded-lg btn-brand">Pricing and packages</a>
+        </div>
       </div>
       <div class="card p-6">
         <h3 class="font-semibold text-lg mb-2">Publications and handouts</h3>
@@ -155,7 +158,7 @@
     </div>
   </section>
 
-  <!-- Nurseries and Schools detail: left aligned, width fits text -->
+  <!-- Nurseries and Schools detail -->
   <section id="schools" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Nurseries and Schools</h2>
@@ -242,7 +245,6 @@
           <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
         </article>
 
-        <!-- Spacer so last card is fully in view -->
         <div class="shrink-0 w-4" aria-hidden="true"></div>
       </div>
     </div>
@@ -252,7 +254,6 @@
   <section id="dubai" class="hideable max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Dubai</h2>
-      <p class="mt-2 subtitle">Support for families and speech therapists in the UAE.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="card p-6">
@@ -279,7 +280,7 @@
     <div class="mt-8"><a href="#home" class="underline">Back to Home</a></div>
   </section>
 
-  <!-- Resources and Publications: left aligned, width fits text -->
+  <!-- Resources and Publications -->
   <section id="resources" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Resources and Publications</h2>
@@ -333,11 +334,11 @@
     </div>
   </footer>
 
-  <!-- Floating CTA opens modal -->
+  <!-- Floating CTA opens contact modal -->
   <a href="#" onclick="openContactModal(event)"
      class="fixed bottom-4 right-4 px-4 py-3 rounded-lg shadow-soft btn-brand">Email now</a>
 
-  <!-- Contact Modal (both copy to clipboard) -->
+  <!-- Contact Modal (copy to clipboard) -->
   <div id="contactModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
     <div class="absolute inset-0 bg-black/50" onclick="closeContactModal()" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
@@ -368,7 +369,39 @@
     </div>
   </div>
 
+  <!-- Pricing Modal (Families: Pricing and Packages) -->
+  <div id="pricingModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="pricingModalTitle">
+    <div class="absolute inset-0 bg-black/50" onclick="closePricingModal()" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
+      <div class="flex items-start justify-between gap-6">
+        <div>
+          <h3 id="pricingModalTitle" class="text-xl font-semibold">Families: Pricing and Packages</h3>
+          <p class="subtitle mt-1 text-sm">Clear, flexible options. Prices in GBP.</p>
+        </div>
+        <button onclick="closePricingModal()" class="px-3 py-1 rounded-lg btn-outline-brand text-sm">Close</button>
+      </div>
+
+      <div class="mt-5 space-y-3">
+        <ul class="space-y-2">
+          <li><strong>Screening:</strong> Free</li>
+          <li><strong>Class observation:</strong> Free</li>
+          <li><strong>30 minute session:</strong> £60</li>
+          <li><strong>45 minute session:</strong> £75</li>
+          <li><strong>Assessment:</strong> from £150</li>
+          <li><strong>Parent consultation (45 minutes):</strong> £75</li>
+        </ul>
+
+        <div class="pt-2 text-sm">
+          <p><strong>Each therapy session includes feedback and homework/strategies for parents and teachers.</strong></p>
+          <p class="mt-2"><strong>Introductory offers available.</strong></p>
+          <p><strong>Block bookings are available on request.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Open/close contact modal
     function openContactModal(e){
       if(e) e.preventDefault();
       const m = document.getElementById('contactModal');
@@ -382,10 +415,29 @@
       m.classList.add('hidden');
       document.body.style.overflow = '';
     }
+
+    // Open/close pricing modal
+    function openPricingModal(e){
+      if(e) e.preventDefault();
+      const m = document.getElementById('pricingModal');
+      m.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePricingModal(){
+      const m = document.getElementById('pricingModal');
+      m.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Global esc handler
     document.addEventListener('keydown', function(ev){
-      if(ev.key === 'Escape'){ closeContactModal(); }
+      if(ev.key === 'Escape'){
+        closeContactModal();
+        closePricingModal();
+      }
     });
 
+    // Copy helpers
     function copyEmail(e){
       if(e) e.preventDefault();
       const email = 'samnashslt@gmail.com';
