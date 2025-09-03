@@ -181,7 +181,7 @@
     </div>
   </section>
 
-  <!-- Professionals -->
+  <!-- Professionals detail -->
   <section id="professionals" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="mb-8">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Professionals</h2>
@@ -195,8 +195,9 @@
           <li>Interview prep and Masters application coaching</li>
           <li>Goal setting and CPD planning</li>
         </ul>
-        <div class="pt-3">
+        <div class="pt-3 flex flex-wrap gap-3">
           <a href="#contact" class="px-4 py-2 rounded-lg btn-brand">Enquire</a>
+          <a href="#" onclick="openProPricingModal(event)" class="px-4 py-2 rounded-lg btn-brand">Pricing and packages</a>
         </div>
       </div>
       <div class="card p-6">
@@ -218,33 +219,26 @@
 
     <div class="relative">
       <div id="carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-2 pr-6 scroll-smooth">
-        <!-- Split testimonial: part 1 -->
         <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">&ldquo;Samantha has been an incredible support for our son, who was struggling with his speech and lagging behind his peers. From the very beginning, her kindness and warmth made him feel at ease, and he thoroughly enjoyed the learning process. In just a few months, we have witnessed remarkable progress in his communication skills and confidence.&rdquo;</p>
           <div class="mt-3 text-sm subtitle">(Parent)</div>
         </article>
-
-        <!-- Split testimonial: part 2 -->
         <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">&ldquo;Samantha not only provided invaluable tips for us to implement at home but also approached everything with such calmness and care, making the journey less daunting for both our son and us as parents. For anyone feeling concerned, Samantha’s expertise and gentle manner truly make all the difference.&rdquo;</p>
           <div class="mt-3 text-sm subtitle">(Parent)</div>
         </article>
-
         <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">&ldquo;I cannot begin to tell you how thankful we are. To be able to now have full conversations with our little boy, knowing that he understands us fills us with such joy and you have done that for us, so thank you. The videos, patience, the kindness you have shown is something we are so thankful for.&rdquo;</p>
           <div class="mt-3 text-sm subtitle">(Parent)</div>
         </article>
-
         <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">&ldquo;As a Band 7 SLT, I found Sam’s supervision invaluable. We reviewed a complex caseload with a focus on dysphagia, and I left each session with clear, practical actions and greater confidence.&rdquo;</p>
           <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
         </article>
-
         <article class="card snap-start shrink-0 w-[88%] md:w-[560px] p-6">
           <p class="italic">&ldquo;Sam’s supervision helped me refine my caseload management and shape presentations for a conference. Her feedback was specific, constructive, and boosted the quality of my delivery.&rdquo;</p>
           <div class="mt-3 text-sm subtitle">(Speech and Language Therapist)</div>
         </article>
-
         <div class="shrink-0 w-4" aria-hidden="true"></div>
       </div>
     </div>
@@ -373,7 +367,7 @@
     </div>
   </div>
 
-  <!-- Pricing Modal (Families: Pricing and Packages) -->
+  <!-- Pricing Modal: Families -->
   <div id="pricingModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="pricingModalTitle">
     <div class="absolute inset-0 bg-black/50" onclick="closePricingModal()" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
@@ -403,7 +397,6 @@
           <p><strong>Discounted Block bookings are available on request.</strong></p>
         </div>
 
-        <!-- Contact inside pricing modal -->
         <div class="pt-3">
           <div class="text-xs uppercase tracking-wide subtitle mb-2">Contact</div>
           <div class="flex flex-wrap gap-2">
@@ -414,6 +407,49 @@
             <button class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
               onclick="copyToClipboard('+44 (0)7868 211705', document.getElementById('phoneCopyMsg2'))">Call</button>
             <span id="phoneCopyMsg2" class="text-sm"></span>
+
+            <a class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
+               href="https://wa.me/447868211705" title="Open WhatsApp">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Modal: Professionals -->
+  <div id="proPricingModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="proPricingModalTitle">
+    <div class="absolute inset-0 bg-black/50" onclick="closeProPricingModal()" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <h3 id="proPricingModalTitle" class="text-xl font-semibold">Professionals: Pricing and Packages</h3>
+          <p class="subtitle mt-1 text-sm">Clear, flexible options.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="closeProPricingModal()" class="px-3 py-1 rounded-lg btn-outline-brand text-sm">Close</button>
+        </div>
+      </div>
+
+      <div class="mt-5 space-y-3">
+        <ul class="space-y-2">
+          <li><strong>Supervision or mentoring session (60 minutes):</strong> £80</li>
+        </ul>
+
+        <div class="pt-2 text-sm">
+          <p><strong>Discounted block bookings are available.</strong></p>
+          <p><strong>Focus areas can include caseload review, dysphagia, presentation/ interview preparation and conference feedback.</strong></p>
+        </div>
+
+        <div class="pt-3">
+          <div class="text-xs uppercase tracking-wide subtitle mb-2">Contact</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
+              onclick="copyToClipboard('samnashslt@gmail.com', document.getElementById('emailCopyMsg3'))">Email</button>
+            <span id="emailCopyMsg3" class="text-sm"></span>
+
+            <button class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
+              onclick="copyToClipboard('+44 (0)7868 211705', document.getElementById('phoneCopyMsg3'))">Call</button>
+            <span id="phoneCopyMsg3" class="text-sm"></span>
 
             <a class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
                href="https://wa.me/447868211705" title="Open WhatsApp">WhatsApp</a>
@@ -439,7 +475,7 @@
       document.body.style.overflow = '';
     }
 
-    // Open/close pricing modal
+    // Open/close Families pricing modal
     function openPricingModal(e){
       if(e) e.preventDefault();
       const m = document.getElementById('pricingModal');
@@ -452,11 +488,25 @@
       document.body.style.overflow = '';
     }
 
+    // Open/close Professionals pricing modal
+    function openProPricingModal(e){
+      if(e) e.preventDefault();
+      const m = document.getElementById('proPricingModal');
+      m.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeProPricingModal(){
+      const m = document.getElementById('proPricingModal');
+      m.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
     // Global esc handler
     document.addEventListener('keydown', function(ev){
       if(ev.key === 'Escape'){
         closeContactModal();
         closePricingModal();
+        closeProPricingModal();
       }
     });
 
