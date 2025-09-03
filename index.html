@@ -42,6 +42,8 @@
       <a href="#home" class="flex items-center gap-2">
         <img src="logo.png" alt="Speechbridge logo" class="h-8 w-auto object-contain">
       </a>
+
+      <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#home" class="hover:underline underline-offset-4">Home</a>
         <a href="about.html" class="hover:underline underline-offset-4">About Sam</a>
@@ -52,9 +54,38 @@
         <a href="#dubai" class="hover:underline underline-offset-4">Dubai</a>
         <a href="#contact" class="hover:underline underline-offset-4">Contact</a>
       </nav>
-      <a href="#" onclick="openContactModal(event)" class="hidden sm:inline-flex items-center px-3 py-2 rounded-lg text-sm shadow-soft btn-outline-brand">Email</a>
+
+      <div class="flex items-center gap-2">
+        <a href="#" onclick="openContactModal(event)" class="hidden sm:inline-flex items-center px-3 py-2 rounded-lg text-sm shadow-soft btn-outline-brand">Email</a>
+
+        <!-- Mobile menu button -->
+        <button
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border"
+          onclick="toggleMobileMenu()"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile menu panel -->
+  <div id="mobileMenu" class="md:hidden hidden border-b bg-white/95 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 grid">
+      <a href="#home" class="py-2" onclick="closeMobileMenu()">Home</a>
+      <a href="about.html" class="py-2" onclick="closeMobileMenu()">About Sam</a>
+      <a href="#services" class="py-2" onclick="closeMobileMenu()">Services</a>
+      <a href="#families" class="py-2" onclick="closeMobileMenu()">Families</a>
+      <a href="#schools" class="py-2" onclick="closeMobileMenu()">Nurseries and Schools</a>
+      <a href="#professionals" class="py-2" onclick="closeMobileMenu()">Professionals</a>
+      <a href="#dubai" class="py-2" onclick="closeMobileMenu()">Dubai</a>
+      <a href="#contact" class="py-2" onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </div>
 
   <!-- Hero -->
   <section id="home" class="relative overflow-hidden">
@@ -518,6 +549,26 @@
   </div>
 
   <script>
+    // Mobile menu helpers
+    function toggleMobileMenu(){
+      var m = document.getElementById('mobileMenu');
+      var btn = document.querySelector('[aria-controls="mobileMenu"]');
+      var isOpen = !m.classList.contains('hidden');
+      if (isOpen) {
+        m.classList.add('hidden');
+        if (btn) btn.setAttribute('aria-expanded','false');
+      } else {
+        m.classList.remove('hidden');
+        if (btn) btn.setAttribute('aria-expanded','true');
+      }
+    }
+    function closeMobileMenu(){
+      var m = document.getElementById('mobileMenu');
+      var btn = document.querySelector('[aria-controls="mobileMenu"]');
+      m.classList.add('hidden');
+      if (btn) btn.setAttribute('aria-expanded','false');
+    }
+
     // Open/close contact modal
     function openContactModal(e){
       if(e) e.preventDefault();
@@ -579,6 +630,7 @@
         closePricingModal();
         closeProPricingModal();
         closeDubaiPricingModal();
+        closeMobileMenu();
       }
     });
 
