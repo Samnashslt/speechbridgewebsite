@@ -365,6 +365,10 @@
           </button>
           <span id="phoneCopyMsg" class="ml-2 text-sm" aria-live="polite"></span>
         </div>
+        <div class="rounded-xl border p-4">
+          <div class="text-xs uppercase tracking-wide subtitle mb-1">WhatsApp</div>
+          <a class="underline text-lg" href="https://wa.me/447868211705" title="Open WhatsApp">Message on WhatsApp</a>
+        </div>
       </div>
     </div>
   </div>
@@ -373,12 +377,15 @@
   <div id="pricingModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="pricingModalTitle">
     <div class="absolute inset-0 bg-black/50" onclick="closePricingModal()" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-lg bg-white rounded-2xl p-6 shadow-soft top-1/2 -translate-y-1/2">
-      <div class="flex items-start justify-between gap-6">
+      <div class="flex items-start justify-between gap-3">
         <div>
           <h3 id="pricingModalTitle" class="text-xl font-semibold">Families: Pricing and Packages</h3>
-          <p class="subtitle mt-1 text-sm">Clear, flexible options. Prices in GBP.</p>
+          <p class="subtitle mt-1 text-sm">Clear, flexible options.</p>
         </div>
-        <button onclick="closePricingModal()" class="px-3 py-1 rounded-lg btn-outline-brand text-sm">Close</button>
+        <div class="flex items-center gap-2">
+          <button onclick="openContactModal(event)" class="px-3 py-1 rounded-lg btn-brand text-sm">Contact me</button>
+          <button onclick="closePricingModal()" class="px-3 py-1 rounded-lg btn-outline-brand text-sm">Close</button>
+        </div>
       </div>
 
       <div class="mt-5 space-y-3">
@@ -394,7 +401,24 @@
         <div class="pt-2 text-sm">
           <p><strong>Each therapy session includes feedback and homework/strategies for parents and teachers.</strong></p>
           <p class="mt-2"><strong>Introductory offers available.</strong></p>
-          <p><strong>Block bookings are available on request.</strong></p>
+          <p><strong>Discounted Block bookings are available on request.</strong></p>
+        </div>
+
+        <!-- Quick contact inside pricing modal -->
+        <div class="pt-3">
+          <div class="text-xs uppercase tracking-wide subtitle mb-2">Quick contact</div>
+          <div class="flex flex-wrap gap-2">
+            <button class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
+              onclick="copyToClipboard('samnashslt@gmail.com', document.getElementById('emailCopyMsg2'))">Email</button>
+            <span id="emailCopyMsg2" class="text-sm"></span>
+
+            <button class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
+              onclick="copyToClipboard('+44 (0)7868 211705', document.getElementById('phoneCopyMsg2'))">Call</button>
+            <span id="phoneCopyMsg2" class="text-sm"></span>
+
+            <a class="px-3 py-2 rounded-lg btn-outline-brand text-sm"
+               href="https://wa.me/447868211705" title="Open WhatsApp">WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
